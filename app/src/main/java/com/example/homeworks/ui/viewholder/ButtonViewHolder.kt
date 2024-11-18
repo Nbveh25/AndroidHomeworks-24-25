@@ -12,7 +12,7 @@ class ButtonViewHolder(
     fun bindItem(itemData: ButtonHoldersData) {
         viewBinding.btnItemList.text = itemData.text
 
-        viewBinding.root.setOnClickListener {
+        viewBinding.btnItemList.setOnClickListener {
             onClickAction(itemData)
         }
     }

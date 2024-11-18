@@ -44,39 +44,24 @@ class MusicListContentFragment : Fragment(R.layout.fragment_list_content) {
             onButtonClicked(buttonData)
         }
 
-        val layoutManager = GridLayoutManager(requireContext(), currentSpanCount)
-
-        layoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
-            override fun getSpanSize(position: Int): Int {
-                val type = musicAdapter.getItemViewType(position)
-                return when (type) {
-                    AdapterWithMultipleHolders.TYPE_BUTTON -> 1
-                    AdapterWithMultipleHolders.TYPE_MUSIC -> currentSpanCount
-                    else -> 1
-                }
-            }
-        }
-
-        with(viewBinding) {
-            mainRecycler.adapter = musicAdapter
-            mainRecycler.layoutManager = layoutManager
-        }
+        val buttonLayoutManager = GridLayoutManager(requireContext(), 3)
+        viewBinding.mainRecycler.layoutManager = buttonLayoutManager
+        viewBinding.mainRecycler.adapter = musicAdapter
     }
 
     private fun onButtonClicked(buttonData: ButtonHoldersData) {
         when (buttonData.id) {
             "List" -> {
                 currentSpanCount = 1
-                Log.e("MusicListContentFragment", "Changed to List view")
             }
             "Grid" -> {
                 currentSpanCount = 3
-                Log.e("MusicListContentFragment", "Changed to Grid view")
             }
         }
 
-        val layoutManager = viewBinding.mainRecycler.layoutManager as GridLayoutManager
-        layoutManager.spanCount = currentSpanCount
+        val musicLayoutManager = GridLayoutManager(requireContext(), currentSpanCount)
+
+        viewBinding.mainRecycler.layoutManager = musicLayoutManager
 
         viewBinding.mainRecycler.adapter?.notifyDataSetChanged()
     }
