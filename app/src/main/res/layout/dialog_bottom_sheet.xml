@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/count_elem_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="@id/left_guide_line"
+        app:layout_constraintRight_toRightOf="@id/right_guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_elem_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/orange"
+        android:text="@string/AddElements"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/left_guide_line"
+        app:layout_constraintRight_toRightOf="@id/right_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/count_elem_et" />
+
+    <Button
+        android:id="@+id/delete_elem_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/orange"
+        android:text="@string/DeleteElements"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/left_guide_line"
+        app:layout_constraintRight_toRightOf="@id/right_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/add_elem_btn" />
+
+    <Button
+        android:id="@+id/add_elem_on_ran_pos_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/orange"
+        android:text="@string/AddElemOnRandomPos"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/left_guide_line"
+        app:layout_constraintRight_toRightOf="@id/right_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/delete_elem_btn" />
+
+    <Button
+        android:id="@+id/delete_elem_on_ran_pos_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/orange"
+        android:text="@string/DeleteElemOnRandomPos"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/left_guide_line"
+        app:layout_constraintRight_toRightOf="@id/right_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/add_elem_on_ran_pos_btn" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

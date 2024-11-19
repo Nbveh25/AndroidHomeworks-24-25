@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Homeworks</string>
+    <string name="AddElements">Добавить элементы</string>
+    <string name="DeleteElements">Удалить элементы</string>
+    <string name="AddElemOnRandomPos">Добавить элемент</string>
+    <string name="DeleteElemOnRandomPos">Удалить элемент</string>
 </resources>
