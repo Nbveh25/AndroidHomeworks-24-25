@@ -18,7 +18,8 @@ class AdapterWithMultipleHolders(
     private val requestManager: RequestManager,
     private var items: List<MultipleHoldersData>,
     private val onButtonClick: (ButtonHoldersData) -> Unit,
-    private val onMusicClick: (MusicHoldersData) -> Unit
+    private val onMusicClick: (MusicHoldersData) -> Unit,
+    private val onLongClick: (Int) -> Boolean
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
@@ -50,7 +51,12 @@ class AdapterWithMultipleHolders(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
-            is MusicViewHolder -> holder.bindItem(items[position] as MusicHoldersData)
+            is MusicViewHolder -> {
+                holder.bindItem(items[position] as MusicHoldersData)
+                holder.itemView.setOnLongClickListener {
+                    onLongClick(position)
+                }
+            }
             is ButtonViewHolder -> holder.bindItem(items[position] as ButtonHoldersData)
         }
     }

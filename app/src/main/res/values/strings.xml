@@ -4,4 +4,8 @@
     <string name="DeleteElements">Удалить элементы</string>
     <string name="AddElemOnRandomPos">Добавить элемент</string>
     <string name="DeleteElemOnRandomPos">Удалить элемент</string>
+    <string name="delete_confirmation_title">Удаление элемента</string>
+    <string name="delete_confirmation_message">Вы уверены, что хотите удалить этот элемент?</string>
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отмена</string>
 </resources>

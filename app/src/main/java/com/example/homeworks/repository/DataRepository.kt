@@ -13,7 +13,7 @@ object DataRepository {
             title = "Still loving you",
             singer = "Scorpions",
             imageUrl = "https://avatars.mds.yandex.net/get-entity_search/68218/98795321/S600xU",
-            desc = "рок-баллада группы Scorpions, выпущенная в альбоме Love at First Sting в 1984 году. Считается международной «визитной карточкой» группы. Во Франции было продано около 1,7 млн копий. Песня является одним из самых успешных синглов группы."
+            desc = "Рок-баллада группы Scorpions, выпущенная в альбоме Love at First Sting в 1984 году. Считается международной «визитной карточкой» группы. Во Франции было продано около 1,7 млн копий. Песня является одним из самых успешных синглов группы."
         ),
 
         MusicHoldersData(
@@ -21,7 +21,7 @@ object DataRepository {
             title = "Stop",
             singer = "Sam Brown",
             imageUrl = "https://avatars.yandex.net/get-music-content/49707/60c5255d.a.2515612-1/m1000x1000?webp=false",
-            desc = "рок-баллада группы Scorpions, выпущенная в альбоме Love at First Sting в 1984 году. Считается международной «визитной карточкой» группы. Во Франции было продано около 1,7 млн копий. Песня является одним из самых успешных синглов группы."
+            desc = "Stop! — песня британской певицы Сэм Браун. Выпущенный в 1988 году сингл занял 52 место в UK Singles Chart. Stop! стал на сегодняшний день самым большим хитом Браун, продержавшись в чартах 12 недель. В 1989 году песня стала тридцать пятым по счёту самым продаваемым синглом в Великобритании."
         ),
 
         MusicHoldersData(
@@ -29,7 +29,7 @@ object DataRepository {
             title = "Bara Bara Bere Bere",
             singer = "Alex Ferrari",
             imageUrl = "https://content-18.foto.my.mail.ru/community/alex_ferrari/_musicplaylistcover/i-15.jpg",
-            desc = "рок-баллада группы Scorpions, выпущенная в альбоме Love at First Sting в 1984 году. Считается международной «визитной карточкой» группы. Во Франции было продано около 1,7 млн копий. Песня является одним из самых успешных синглов группы."
+            desc = "Бразильский певец Алекс Феррари зарегистрировал его в Music Edition: Kronika Records, записал в июне 2012 года и многократно интерпретировал в своей родной стране. Его версия завоевала наибольшую популярность на европейских ночных площадках. "
         ),
 
         MusicHoldersData(
@@ -37,7 +37,7 @@ object DataRepository {
             title = "BABY SAID",
             singer = "Maneskin",
             imageUrl = "https://ih1.redbubble.net/image.3728114076.2767/raf,750x1000,075,t,FFFFFF:97ab1c12de.jpg",
-            desc = "рок-баллада группы Scorpions, выпущенная в альбоме Love at First Sting в 1984 году. Считается международной «визитной карточкой» группы. Во Франции было продано около 1,7 млн копий. Песня является одним из самых успешных синглов группы."
+            desc = "\"Baby Said\" (stylized in all caps as \"BABY SAID\") is a song by Italian rock band Måneskin. It was released on 3 March 2023 as the fifth single from their third studio album Rush! (2023)"
         ),
 
         MusicHoldersData(
@@ -45,7 +45,7 @@ object DataRepository {
             title = "Hold On Love",
             singer = "Dan Balan",
             imageUrl = "https://avatars.yandex.net/get-music-content/3316841/4ee202cb.a.13487769-1/m1000x1000?webp=false",
-            desc = "рок-баллада группы Scorpions, выпущенная в альбоме Love at First Sting в 1984 году. Считается международной «визитной карточкой» группы. Во Франции было продано около 1,7 млн копий. Песня является одним из самых успешных синглов группы."
+            desc = "..."
         ),
 
         MusicHoldersData(
@@ -53,7 +53,7 @@ object DataRepository {
             title = "My Life Be Like",
             singer = "Grits, Toby Mac",
             imageUrl = "https://lastfm.freetls.fastly.net/i/u/ar0/0588c05d2a14348f682126819971b18e.jpg",
-            desc = "рок-баллада группы Scorpions, выпущенная в альбоме Love at First Sting в 1984 году. Считается международной «визитной карточкой» группы. Во Франции было продано около 1,7 млн копий. Песня является одним из самых успешных синглов группы."
+            desc = "«Ooh Ahh» — сингл американской христианской хип-хоп группы GRITS при участии TobyMac для их четвёртого студийного альбома The Art of Translation. Продюсеры песни Рик «DJ Form» Роббинс и Отто Прайс из Incorporated Elements. Песня была написана Риком Роббинсом, Отто Прайсом, Стэйси Джонсом, Тероном Картером и TobyMac. Иногда песню называют «My Life Be Like» и «My Life Be Like (Ooh Ahh)»."
         ),
 
         MusicHoldersData(
@@ -61,7 +61,7 @@ object DataRepository {
             title = "My Life Be Like",
             singer = "Grits, Toby Mac",
             imageUrl = "https://lastfm.freetls.fastly.net/i/u/ar0/0588c05d2a14348f682126819971b18e.jpg",
-            desc = "рок-баллада группы Scorpions, выпущенная в альбоме Love at First Sting в 1984 году. Считается международной «визитной карточкой» группы. Во Франции было продано около 1,7 млн копий. Песня является одним из самых успешных синглов группы."
+            desc = "me life be like ohh ahh"
         ),
 
         MusicHoldersData(
@@ -69,7 +69,7 @@ object DataRepository {
             title = "Bloody Stream",
             singer = "Coda",
             imageUrl = "https://lastfm.freetls.fastly.net/i/u/ar0/27af20a01b0071ca19122aa478533b8c.jpg",
-            desc = "рок-баллада группы Scorpions, выпущенная в альбоме Love at First Sting в 1984 году. Считается международной «визитной карточкой» группы. Во Франции было продано около 1,7 млн копий. Песня является одним из самых успешных синглов группы."
+            desc = "Bloody Stream, также записывается, как BLOODY STREAM — дебютный сингл, исполненный японским музыкантом под псевдонимом Coda, членом музыкальной группы No Regret Life[англ.]. Автором текста является Саори Кодама, a композитором — Тосиюки Омори. Сингл использовался в качестве открывающей темы ко второй части первого сезона аниме-сериала JoJo’s Bizarre Adventure, точнее ко второй части - Battle Tendency"
         ),
 
         MusicHoldersData(
@@ -77,18 +77,11 @@ object DataRepository {
             title = "Still loving you",
             singer = "Scorpions",
             imageUrl = "https://avatars.mds.yandex.net/get-entity_search/68218/98795321/S600xU",
-            desc = "рок-баллада группы Scorpions, выпущенная в альбоме Love at First Sting в 1984 году. Считается международной «визитной карточкой» группы. Во Франции было продано около 1,7 млн копий. Песня является одним из самых успешных синглов группы."
+            desc = "Рок-баллада группы Scorpions, выпущенная в альбоме Love at First Sting в 1984 году. Считается международной «визитной карточкой» группы. Во Франции было продано около 1,7 млн копий. Песня является одним из самых успешных синглов группы."
         ),
     )
-
-    fun getListForMultipleTypes(ctx: Context): List<MultipleHoldersData> {
-        return items
-    }
 
     fun getRandomElem(): MultipleHoldersData {
         return items[(1..8).random()]
     }
-
-    fun getSize() : Int = items.size
-
 }
