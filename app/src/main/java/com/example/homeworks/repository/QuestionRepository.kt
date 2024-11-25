@@ -80,26 +80,26 @@ object QuestionRepository {
                 Answer(id = 1, answer = "The World"),
                 Answer(id = 2, answer = "Silver Chariot"),
                 Answer(id = 3, answer = "Hierophant Green"),
-                Answer(id = 4, answer ="Gold Experience")
+                Answer(id = 4, answer = "Gold Experience")
             )
         ),
         Question(
             id = 9,
             question = "Кто является автором манги 'Невероятные приключения ДжоДжо'?",
             answers = listOf(
-                Answer(id=1, answer="Хирохико Араки"),
-                Answer(id=2, answer="Наоко Такеучи"),
-                Answer(id=3, answer="Масаси Kishimoto")
+                Answer(id = 1, answer = "Хирохико Араки"),
+                Answer(id = 2, answer = "Наоко Такеучи"),
+                Answer(id = 3, answer = "Масаси Kishimoto")
             )
         ),
         Question(
-            id=10,
-            question="Какой из персонажей имеет способность управлять временем?",
-            answers=listOf(
-                Answer(id=1, answer="Дио Брандо"),
-                Answer(id=2, answer="Пуччи"),
-                Answer(id=3, answer="Джотаро Куджо"),
-                Answer(id=4, answer="Гигантский Слон")
+            id = 10,
+            question = "Какой из персонажей имеет способность управлять временем?",
+            answers = listOf(
+                Answer(id = 1, answer = "Дио Брандо"),
+                Answer(id = 2, answer = "Пуччи"),
+                Answer(id = 3, answer = "Джотаро Куджо"),
+                Answer(id = 4, answer = "Гигантский Слон")
             )
         )
     )
@@ -108,5 +108,5 @@ object QuestionRepository {
         return questions[position]
     }
 
-    fun getSize() : Int = questions.size
+    fun getSize(): Int = questions.size
 }

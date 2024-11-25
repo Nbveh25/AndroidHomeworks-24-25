@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
         viewPagerAdapter = ViewPagerAdapter(this)
         viewBinding.viewPager2.adapter = viewPagerAdapter
 
-        viewBinding.viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        viewBinding.viewPager2.registerOnPageChangeCallback(object :
+            ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 updateQuestionCounter(position)
