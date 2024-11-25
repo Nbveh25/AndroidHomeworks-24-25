@@ -20,7 +20,8 @@ object QuestionRepository {
             answers = listOf(
                 Answer(id = 1, answer = "Star Platinum"),
                 Answer(id = 2, answer = "Gold Experience"),
-                Answer(id = 3, answer = "Crazy Diamond")
+                Answer(id = 3, answer = "Crazy Diamond"),
+                Answer(id = 4, answer = "Silver Chariot")
             )
         ),
         Question(
@@ -38,7 +39,8 @@ object QuestionRepository {
             answers = listOf(
                 Answer(id = 1, answer = "Дио Брандо"),
                 Answer(id = 2, answer = "Пуччи"),
-                Answer(id = 3, answer = "Ван Дер Рейк")
+                Answer(id = 3, answer = "Ван Дер Рейк"),
+                Answer(id = 4, answer = "Куадерна")
             )
         ),
         Question(
@@ -47,7 +49,8 @@ object QuestionRepository {
             answers = listOf(
                 Answer(id = 1, answer = "Джолин Куджо"),
                 Answer(id = 2, answer = "Джорно Джованна"),
-                Answer(id = 3, answer = "Рудольф Грэйс")
+                Answer(id = 3, answer = "Рудольф Грэйс"),
+                Answer(id = 4, answer = "Гео Брандо")
             )
         ),
         Question(
@@ -65,7 +68,9 @@ object QuestionRepository {
             answers = listOf(
                 Answer(id = 1, answer = "Стиль 'Хамон'"),
                 Answer(id = 2, answer = "Стиль 'Стэнд'"),
-                Answer(id = 3, answer = "Стиль 'Кунг-фу'")
+                Answer(id = 3, answer = "Стиль 'Кунг-фу'"),
+                Answer(id = 4, answer = "Стиль 'Меча'"),
+                Answer(id = 5, answer = "Стиль 'Бокса'")
             )
         ),
         Question(
@@ -74,25 +79,27 @@ object QuestionRepository {
             answers = listOf(
                 Answer(id = 1, answer = "The World"),
                 Answer(id = 2, answer = "Silver Chariot"),
-                Answer(id = 3, answer = "Hierophant Green")
+                Answer(id = 3, answer = "Hierophant Green"),
+                Answer(id = 4, answer ="Gold Experience")
             )
         ),
         Question(
             id = 9,
             question = "Кто является автором манги 'Невероятные приключения ДжоДжо'?",
             answers = listOf(
-                Answer(id = 1, answer = "Хирохико Араки"),
-                Answer(id = 2, answer = "Наоко Такеучи"),
-                Answer(id = 3, answer = "Масаси Kishimoto")
+                Answer(id=1, answer="Хирохико Араки"),
+                Answer(id=2, answer="Наоко Такеучи"),
+                Answer(id=3, answer="Масаси Kishimoto")
             )
         ),
         Question(
-            id = 10,
-            question = "Какой из персонажей имеет способность управлять временем?",
-            answers = listOf(
-                Answer(id = 1, answer = "Дио Брандо"),
-                Answer(id = 2, answer = "Пуччи"),
-                Answer(id = 3, answer = "Джотаро Куджо")
+            id=10,
+            question="Какой из персонажей имеет способность управлять временем?",
+            answers=listOf(
+                Answer(id=1, answer="Дио Брандо"),
+                Answer(id=2, answer="Пуччи"),
+                Answer(id=3, answer="Джотаро Куджо"),
+                Answer(id=4, answer="Гигантский Слон")
             )
         )
     )
