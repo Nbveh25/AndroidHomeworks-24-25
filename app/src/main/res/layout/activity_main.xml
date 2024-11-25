@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -34,10 +34,11 @@
             android:textSize="24sp" />
 
         <TextView
+            android:id="@+id/max_count_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/count_of_question"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            tools:text="5" />
 
     </LinearLayout>
 

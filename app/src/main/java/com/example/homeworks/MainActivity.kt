@@ -11,7 +11,6 @@ import com.example.homeworks.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var viewPager: ViewPager2
     private lateinit var viewPagerAdapter: ViewPagerAdapter
     private lateinit var viewBinding: ActivityMainBinding
 
@@ -20,65 +19,65 @@ class MainActivity : AppCompatActivity() {
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
 
-        viewPagerAdapter = ViewPagerAdapter(this)
-
-        viewPager = viewBinding.viewPager2
-        viewPager.adapter = viewPagerAdapter
-
-        initButtons()
         setupViewPager()
+        initButtons()
     }
 
+    private fun setupViewPager() {
+        viewPagerAdapter = ViewPagerAdapter(this)
+        viewBinding.viewPager2.adapter = viewPagerAdapter
+
+        viewBinding.viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                updateQuestionCounter(position)
+                updateButtonsState(position)
+            }
+        })
+    }
 
     private fun initButtons() {
         with(viewBinding) {
             prevBtn.setOnClickListener {
-                if (viewPager2.currentItem > 0) {
-                    viewPager2.currentItem -= 1
+                val currentItem = viewPager2.currentItem
+                if (currentItem > 0) {
+                    viewPager2.currentItem = currentItem - 1
                 }
             }
 
             nextBtn.setOnClickListener {
-                if (viewPager2.currentItem < viewPagerAdapter.itemCount - 1) {
-                    viewPager2.currentItem += 1
+                val currentItem = viewPager2.currentItem
+                if (currentItem < viewPagerAdapter.itemCount - 1) {
+                    viewPager2.currentItem = currentItem + 1
                 } else {
-                    // Обработка завершения теста
                     finishTest()
                 }
             }
         }
     }
 
-    private fun setupViewPager() {
-        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                viewBinding.curQuestion.text = (position+1).toString()
-                updateButtonsState()
-            }
-        })
-
+    private fun updateQuestionCounter(position: Int) {
+        with(viewBinding) {
+            curQuestion.text = (position + 1).toString()
+            maxCountQuestion.text = viewPagerAdapter.itemCount.toString()
+        }
     }
 
-    private fun updateButtonsState() {
+    private fun updateButtonsState(position: Int) {
         with(viewBinding) {
-            if (viewPager2.currentItem == 0) {
-                prevBtn.isEnabled = false
-            } else {
-                prevBtn.isEnabled = true
-            }
+            prevBtn.isEnabled = position > 0
 
-            if (viewPager2.currentItem == 4) {
-                nextBtn.text = getText(R.string.complete)
+            if (position == viewPagerAdapter.itemCount - 1) {
+                nextBtn.text = getString(R.string.complete)
                 nextBtn.setBackgroundColor(Color.GREEN)
             } else {
-                nextBtn.text = getText(R.string.next)
+                nextBtn.text = getString(R.string.next)
                 nextBtn.setBackgroundColor(ContextCompat.getColor(this@MainActivity, R.color.blue))
             }
         }
     }
 
     private fun finishTest() {
-        Toast.makeText(this, "Тест завершен", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.test_completed), Toast.LENGTH_SHORT).show()
     }
 }
