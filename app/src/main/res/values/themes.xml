@@ -6,4 +6,36 @@
     </style>
 
     <style name="Theme.HomeWorks" parent="Base.Theme.HomeWorks" />
+
+    <style name="BlueTheme" parent="Theme.HomeWorks">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorSecondary">@color/light_blue</item>
+        <item name="android:windowBackground">@color/light_blue</item>
+        <item name="colorSurface">@color/blue</item>
+        <item name="textInputStyle">@style/Widget.Material3.TextInputLayout.OutlinedBox</item>
+    </style>
+
+    <style name="RedTheme" parent="Theme.HomeWorks">
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorSecondary">@color/light_red</item>
+        <item name="android:windowBackground">@color/light_red</item>
+        <item name="colorSurface">@color/red</item>
+        <item name="textInputStyle">@style/Widget.Material3.TextInputLayout.OutlinedBox</item>
+    </style>
+
+    <style name="GreenTheme" parent="Theme.HomeWorks">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorSecondary">@color/light_green</item>
+        <item name="android:windowBackground">@color/light_green</item>
+        <item name="colorSurface">@color/green</item>
+        <item name="textInputStyle">@style/Widget.Material3.TextInputLayout.OutlinedBox</item>
+    </style>
+
+    <style name="YellowTheme" parent="Theme.HomeWorks">
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorSecondary">@color/light_yellow</item>
+        <item name="android:windowBackground">@color/light_yellow</item>
+        <item name="colorSurface">@color/yellow</item>
+        <item name="textInputStyle">@style/Widget.Material3.TextInputLayout.OutlinedBox</item>
+    </style>
 </resources>
