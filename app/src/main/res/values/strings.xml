@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">HomeWorks</string>
+    <string name="enter_header_notification">Введите заголовок уведомления</string>
+    <string name="enter_message_notification">Введите сообщение уведомления</string>
+    <string name="show_notification">Показать уведомление</string>
+    <string name="reset_color">Сбросить цвет</string>
+    <string name="choose_color">Выберите цвет</string>
+    <string name="close">X</string>
 </resources>
