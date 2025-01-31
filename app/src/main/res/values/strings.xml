@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">HomeWorks</string>
+    <string name="no_running_coroutines">Нет запущенных корутин для отмены</string>
+    <string name="coroutines_canceled">корутин было отменено</string>
+    <string name="input_count_coroutine">Введите количество корутин</string>
+    <string name="mode">Выбор режима выполнения:</string>
+    <string name="sequentially">Последовательно</string>
+    <string name="parallel">Параллельно</string>
+    <string name="onMinimize">При сворачивании приложения:</string>
+    <string name="cancel_work">Отменить работу</string>
+    <string name="continue_work">Продолжить работу</string>
+    <string name="choose_pool">Выберите пул потоков:</string>
+    <string name="snackbar_close">Закрыть</string>
+    <string name="snackbar_coroutines_canceled">%1$d корутин было отменено.</string>
+    <string name="snackbar_no_running_coroutines">Нет запущенных корутин для отмены.</string>
+    <string name="snackbar_start_coroutines">Запущено %1$d корутин.</string>
+    <string name="error_invalid_coroutine_count">Пожалуйста, введите корректное количество корутин.</string>
+    <string name="error_starting_coroutines">Ошибка при запуске корутин: %1$s</string>
+    <string name="coroutine_cancel">Отменить корутины</string>
+    <string name="coroutine_run">Запустить корутины</string>
+
+    <string name="perm_for_notification">Разрешение на уведомления</string>
+    <string name="mess_for_notification">Пожалуйста, предоставьте разрешение на показ уведомлений, чтобы получать важные обновления.</string>
+    <string name="settings">Настройки</string>
+    <string name="cancel">Отмена</string>
 </resources>
