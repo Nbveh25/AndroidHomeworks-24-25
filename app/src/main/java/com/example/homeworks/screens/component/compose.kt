@@ -15,6 +15,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
 import com.example.homeworks.R
+import com.example.homeworks.util.Constants
 import com.example.homeworks.util.CoroutineManager
 import kotlinx.coroutines.*
 
@@ -37,9 +38,9 @@ fun CoroutineScreen(context: Context) {
             if (event == Lifecycle.Event.ON_STOP && cancelOnMinimize) {
                 canceledCount = coroutineManager.cancelCoroutines()
                 snackbarMessage = if (canceledCount > 0) {
-                    "Корутин было отменено $canceledCount"
+                    context.resources.getString(R.string.coroutines_canceled, canceledCount)
                 } else {
-                    "Нет запущенных корутин для отмены"
+                    context.resources.getString(R.string.no_coroutines_to_cancel)
                 }
                 snackbarVisible = true
             }
@@ -181,13 +182,13 @@ fun CoroutineScreen(context: Context) {
         Button(
             onClick = {
                 if (coroutineCount.isEmpty() || !coroutineCount.all { it.isDigit() }) {
-                    snackbarMessage = "Пожалуйста, введите корректное количество корутин"
+                    snackbarMessage = context.resources.getString(R.string.invalid_coroutine_count)
                     snackbarVisible = true
                 } else {
                     val count = coroutineCount.toInt()
                     val dispatcher = when (selectedDispatcher) {
-                        "IO" -> Dispatchers.IO
-                        "Main" -> Dispatchers.Main
+                        Constants.IO -> Dispatchers.IO
+                        Constants.MAIN -> Dispatchers.Main
                         else -> Dispatchers.Default
                     }
                     try {
@@ -196,11 +197,11 @@ fun CoroutineScreen(context: Context) {
                             isSequential = isSequential,
                             dispatcher = dispatcher
                         ) {
-                            snackbarMessage = "Запущено корутин: $count"
+                            snackbarMessage = context.resources.getString(R.string.coroutines_started, count)
                             snackbarVisible = true
                         }
                     } catch (e: Exception) {
-                        snackbarMessage = "Ошибка запуска корутин: ${e.message}"
+                        snackbarMessage = context.resources.getString(R.string.coroutine_start_error, e.message)
                         snackbarVisible = true
                     }
                 }
@@ -214,9 +215,9 @@ fun CoroutineScreen(context: Context) {
             onClick = {
                 val canceledCount = coroutineManager.cancelCoroutines()
                 snackbarMessage = if (canceledCount > 0) {
-                    "Отменено корутин: $canceledCount"
+                    context.resources.getString(R.string.coroutines_canceled, canceledCount)
                 } else {
-                    "Нет запущенных корутин для отмены"
+                    context.resources.getString(R.string.no_coroutines_to_cancel)
                 }
                 snackbarVisible = true
             },

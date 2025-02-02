@@ -14,34 +14,31 @@ class CoroutineManager {
         onComplete: () -> Unit
     ) {
         val dispatcherName = when (dispatcher) {
-            Dispatchers.IO -> "IO"
-            Dispatchers.Main -> "Main"
-            Dispatchers.Default -> "Default"
-            else -> "Unknown"
+            Dispatchers.IO -> Constants.IO
+            Dispatchers.Main -> Constants.MAIN
+            Dispatchers.Default -> Constants.DEFAULT
+            else -> Constants.UNKNOWN
         }
         Log.d("CoroutineManager", "Using dispatcher: $dispatcherName")
 
         if (isSequential) {
             val job = scope.launch(dispatcher) {
-                Log.d("CoroutineManager", "Starting sequential coroutines")
-                repeat(count) {
-                    delay(2000)
-                    Log.d("CoroutineManager", "Coroutine $it completed")
+                repeat(count) { index ->
+                    val innerJob = launch {
+                        delay(2000)
+                        Log.d("CoroutineManager", "Sequential coroutine $index completed")
+                    }
+                    activeJobs.add(innerJob)
+                    innerJob.join()
                 }
             }
             activeJobs.add(job)
-
-            job.invokeOnCompletion {
-                if (it == null) {
-                    Log.d("CoroutineManager", "Sequential coroutines completed")
-                }
-            }
         } else {
             Log.d("CoroutineManager", "Starting parallel coroutines")
-            repeat(count) {
+            repeat(count) { index ->
                 val job = scope.launch(dispatcher) {
                     delay(2000)
-                    Log.d("CoroutineManager", "Coroutine $it completed")
+                    Log.d("CoroutineManager", "Parallel coroutine $index completed")
                 }
                 activeJobs.add(job)
             }
