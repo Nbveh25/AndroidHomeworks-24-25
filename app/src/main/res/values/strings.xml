@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">HomeWorks</string>
+    <string name="fill_all_fields">Заполните все поля</string>
+    <string name="error_user_not_found">Ошибка: пользователь не найден</string>
+    <string name="car_added">Автомобиль добавлен</string>
+    <string name="car_deleted">Автомобиль удален</string>
+    <string name="error_save">Ошибка при сохранении</string>
+    <string name="error_delete">Ошибка при удалении</string>
+    <string name="error_registration">Ошибка регистрации</string>
+    <string name="error_signin">Ошибка входа</string>
+    <string name="error_loading_data">Ошибка при загрузке данных</string>
+    <string name="car_deleting">Удаление автомобиля</string>
+    <string name="delete_car_confirmation">Вы действительно хотите удалить %1$s %2$s?</string>
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отмена</string>
+    <string name="user_with_same_name_exist">Пользователь с таким именем уже существует</string>
+    <string name="registration_success">Регистрация успешна</string>
+    <string name="car_save">Сохранить автомобиль</string>
+    <string name="model">Модель</string>
+    <string name="brand">Марка</string>
+    <string name="url">URL изображения</string>
+    <string name="nickname">Никнейм</string>
+    <string name="password">Пароль</string>
+    <string name="login">Войти</string>
+    <string name="create_account">Создать аккаунт</string>
+    <string name="e_mail">E-mail</string>
+    <string name="register">Зарегистрироваться</string>
+
+
 </resources>

@@ -1,20 +1,31 @@
 package com.example.homeworks
 
+import NavigationManager
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.homeworks.screens.LoginFragment
+import com.example.homeworks.screens.MainFragment
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        if (savedInstanceState == null) {
+            val isLoggedIn = (application as App).isUserLoggedIn()
+            
+            if (isLoggedIn) {
+                NavigationManager.navigateToFragment(
+                    fragmentManager = supportFragmentManager,
+                    fragment = MainFragment.getInstance()
+                )
+            } else {
+                NavigationManager.navigateToFragment(
+                    fragmentManager = supportFragmentManager,
+                    fragment = LoginFragment.getInstance()
+                )
+            }
         }
     }
 }
